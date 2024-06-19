@@ -64,11 +64,11 @@ export function CyclesContextProvider({ children }: CyclesContextProviderProps) 
   }
 
   function interruptCurrentCycle() {
-    dispatch(interruptCurrentCycleAction);
+    dispatch(interruptCurrentCycleAction());
   }
 
   function markCurrentCycleAsFinished() {
-    dispatch(makeCurrentCycleAsFinishedAction);
+    dispatch(makeCurrentCycleAsFinishedAction());
   }
 
   return (
