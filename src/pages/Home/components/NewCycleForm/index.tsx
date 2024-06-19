@@ -1,8 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/control-has-associated-label */
+import { useContext } from 'react';
+import { useFormContext } from 'react-hook-form';
+
+import { CyclesContext } from '../../../../contexts/CycleContext';
+
 import { FormContainer, MinutesAmountInput, TaskInput } from './styles';
 
 export function NewCycleForm() {
+  const { activeCycle } = useContext(CyclesContext);
+  const { register } = useFormContext();
   return (
     <FormContainer>
       <label htmlFor="task">Vou trabalhar em</label>
